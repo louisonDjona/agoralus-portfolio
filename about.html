@@ -186,7 +186,7 @@
     <section class="agorra-section">
         <h2 class="section-title">AGORRA</h2>
         <div class="slider-container">
-            <div class="one" id="two">
+            <div class="slider" id="first">
                 <img src="./Junior Doki/IMG_0985.PNG" alt="Image 1">
                 <img src="./Junior Doki/IMG_0991.PNG" alt="Image 2">
                 <img src="./Junior Doki/IMG_0985.PNG" alt="Image 3">
@@ -589,31 +589,6 @@
     <script>
         const slider=document.getElementById('slider');
         const slides=slider.querySelectorAll('img');
-        let index=0
-        function updateSlider(){
-            slider.style.transform=`translateX(-${index*100}%)`;
-        }
-        function nextSlide(){
-            index=(index+1)%slides.length;
-            updateSlider();
-        }
-        function prevSlide(){
-            index=(index-1+slides.length)%slides.length;
-            updateSlider();
-        }
-        let startX=0;
-        Slider.addEventListener('touchstart',(e)=>{
-            startX=e.touches[0].clientX;
-        });
-        Slider.addEventListener('touchend',(e)=>{
-            const endX=e.changedTouches[0].clientX;
-            const deltaX=endX-startX;
-            if(deltaX>50) prevSlide();
-            else if(deltaX<-50)nextSlide();
-        });
-
-        const one=document.getElementById('one');
-        const one=one.querySelectorAll('img');
         let index=0
         function updateSlider(){
             slider.style.transform=`translateX(-${index*100}%)`;
