@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Playfair Display', serif;
+            background: #ffffff;
+            color: #111;
+            padding: 20px;
+        }
+
+        header{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1{
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #111;
+            display: inline-block;
+            padding-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .mannequin-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .mannequin-card{
+            border: 1px solid #ddd;
+            background: #fafafa;
+            padding: 20px;
+            transition: 0.3s;
+            overflow: visible;
+        }
+
+        .mannequin-card img{
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .mannequin-title{
+            text-align: center;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .list-row{
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 4px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .list-row li{
+            flex: 0 0 auto;
+            min-width: 100px;
+            list-style: none;
+            background-color: #f0f0f0;
+            padding: 6px 10px;
+            font-size: 0.85rem;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        @media(mx-width: 600px){
+            .list-row li{
+                flex: 1 1 calc(48% - 6px);
+            }
+        }
+
+        footer{
+            text-align: center;
+            padding: 25px 10px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Mannequins</h1>
+    </header>
+
+    <main class="Mannequin-grid">
+        <section class="mannequin-card">
+            <img src="./Aimerance BIN/IMG_1155.PNG" alt="Mannequin 1">
+            <h2 class="mannequin-title">AIMERANCE BIN</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>171</li>
+                <li>83</li>
+                <li>68</li>
+                <li>93</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>39</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Abiagael Chiam/IMG_1164.PNG" alt="Mannequin 2">
+            <h2 class="mannequin-title">ABIGAEL CHIAM</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>173</li>
+                <li>82</li>
+                <li>69</li>
+                <li>89</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>39</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Audrey Mwanaluma/IMG_1233.PNG" alt="Mannequin 3">
+            <h2 class="mannequin-title">AUDREY MWANALUMA</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>185</li>
+                <li>102</li>
+                <li>84</li>
+                <li>111</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>41</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Kethia Tshibuabua/IMG_1123.PNG" alt="Mannequin 4">
+            <h2 class="mannequin-title">KETHIA TSHIBUABUA</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>171</li>
+                <li>80</li>
+                <li>63</li>
+                <li>90</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>40</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Migrael Luatianakio/IMG_1150.PNG" alt="Mannequin 5">
+            <h2 class="mannequin-title">MIGRAEL LUATINAKIO</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>170</li>
+                <li>82</li>
+                <li>68</li>
+                <li>90</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>39</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Rose Kadinga/IMG_0970.PNG" alt="Mannequin 7">
+            <h2 class="mannequin-title">ROSE KADINGA</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>167</li>
+                <li>82</li>
+                <li>66</li>
+                <li>90</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>38</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Sandy Meyers/IMG_1141.PNG" alt="Mannequin 9">
+            <h2 class="mannequin-title">SANDY MEYERS</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>173</li>
+                <li>84</li>
+                <li>64</li>
+                <li>91</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>39</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Tina Kishiba/IMG_1142.PNG" alt="Mannequin 10">
+            <h2 class="mannequin-title">TINA KISHIBA</h2>
+            <ul class="list-row">
+                <li>178</li>
+                <li>87</li>
+                <li>77</li>
+                <li>100</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>40</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>178</li>
+                <li>87</li>
+                <li>77</li>
+                <li>100</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>40</li>
+            </ul>
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Tyty Francine/IMG_1147.PNG" alt="Mannequin 11">
+            <h2 class="mannequin-title">TYTY FRANCINE</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>171</li>
+                <li>81</li>
+                <li>64</li>
+                <li>91</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>39</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Bless Kongolo/IMG_0981.PNG" alt="Mannequin 12">
+            <h2 class="mannequin-title">BLESS KONGOLO</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>189</li>
+                <li>95</li>
+                <li>81</li>
+                <li>98</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>45</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Christian Salomon KAPAKO/IMG_0987.PNG" alt="Mannequin 13">
+            <h2 class="mannequin-title">CHRISTIAN SALOMON KAPAKO</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>167</li>
+                <li>88</li>
+                <li>82</li>
+                <li>91</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>42</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Dan Piema/IMG_1204.PNG" alt="Mannequin 14">
+            <h2 class="mannequin-title">DAN PIEMA</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>182</li>
+                <li>85</li>
+                <li>73</li>
+                <li>93</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>43</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Junior Doki/IMG_0991.PNG" alt="Mannequin 15">
+            <h2 class="mannequin-title">JUNIOR DOKI</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>174</li>
+                <li>94</li>
+                <li>81</li>
+                <li>106</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>43</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Lionel Bwana/IMG_1213.PNG" alt="Mannequin 16">
+            <h2 class="mannequin-title">LIONEL BWANA</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>186</li>
+                <li>88</li>
+                <li>79</li>
+                <li>98</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>45</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Paul Mputu/IMG_1215.PNG" alt="Mannequin 17">
+            <h2 class="mannequin-title">PAUL MPUTU</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>181</li>
+                <li>91</li>
+                <li>77</li>
+                <li>99</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>45</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Phogene Sonyi/IMG_1220.PNG" alt="Mannequin 18">
+            <h2 class="mannequin-title">PHOGENE SONYI</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Poitrine</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>180</li>
+                <li>88</li>
+                <li>72</li>
+                <li>95</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>45</li>
+            </ul>
+            
+        </section>
+
+        <section class="mannequin-card">
+            <img src="./Victor Lukusa/IMG_0978.PNG" alt="Mannequin 19">
+            <h2 class="mannequin-title">VICTOR LUKUSA</h2>
+            <ul class="list-row">
+                <li>Taille</li>
+                <li>Poitrine</li>
+                <li>Taille</li>
+                <li>Hanche</li>
+                <li>Cheveux</li>
+                <li>Yeux</li>
+                <li>Pointure</li>
+            </ul>
+
+            <ul class="list-row">
+                <li>179</li>
+                <li>88</li>
+                <li>76</li>
+                <li>90</li>
+                <li>Noir</li>
+                <li>Marron</li>
+                <li>42</li>
+            </ul>
+            
+        </section>
+    </main>
+</body>
+</html>
