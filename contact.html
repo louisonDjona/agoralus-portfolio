@@ -1,99 +1,185 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact page</title>
-    <style>
-        *{
-           box-sizing: border-box;
-           margin: 0;
-           padding: 0;
-           font-family: Arial, sans-serif;
-        } 
-        body{
-           background-color: #527181;
-           padding: 40px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me | Lubumbashi Fashion</title>
+  <style>
+    * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+    }
+
+    body {
+       font-family: 'Georgia', serif;
+       background: #fff;
+       color: #111;
+       line-height: 1.6;
+       padding: 0 1rem;
+    }
+
+    header {
+       text-align: center;
+       padding: 2rem 0;
+       border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+       font-size: 2.5rem;
+       letter-spacing: 2px;
+    }
+
+    nav {
+       margin-top: 1rem;
+    }
+
+    nav a {
+       margin: 0 1rem;
+       text-decoration: none;
+       color: #111;
+       font-weight: bold;
+       position: relative;
+    }
+
+    nav a.active::after,
+    nav a:hover::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #111;
+        left: 0;
+        bottom: -5px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3rem auto;
+        max-width: 1000px;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .contact-intro {
+       flex: 1 1 300px;
+    }
+
+    .contact-intro h2 {
+       font-size: 2rem;
+       margin-bottom: 1rem;
+    }
+
+    .contact-form {
+        flex: 1 1 300px;
+    }
+
+    form {
+       display: flex;
+       flex-direction: column;
+    }
+
+    label {
+       margin-top: 1rem;
+       font-weight: bold;
+    }
+
+    input,
+    textarea {
+       padding: 0.8rem;
+       border: 1px solid #ccc;
+       margin-top: 0.5rem;
+       font-size: 1rem;
+       transition: border 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: #000;
+        outline: none;
+    }
+
+    button {
+       margin-top: 2rem;
+       padding: 0.8rem;
+       background: #000;
+       color: #fff;
+       border: none;
+       font-size: 1rem;
+       cursor: pointer;
+       letter-spacing: 1px;
+       transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background: #333;
+    }
+
+    footer {
+       text-align: center;
+       padding: 2rem 1rem;
+       border-top: 1px solid #ddd;
+       margin-top: 4rem;
+       font-size: 0.9rem;
+       color: #555;
+    }
+
+    @media (max-width: 768px) {
+       .contact-container {
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem;
         }
-        .contact-container{
-            display: flex;
-            max-width: 1000px;
-            margin: auto;
-            background-color: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            flex-wrap: wrap;
+
+        header h1 {
+           font-size: 2rem;
         }
-        .contatc-info, .contact-form{
-           flex: 1;
-           padding: 30px;
+
+        .contact-intro,
+        .contact-form {
+           width: 100%;
         }
-        .contatc-info{
-            background: #222;
-            color: white;
-        }
-        .contact-info h2{
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-        .contact-info p{
-            margin: 10px 0;
-        }
-        .contact-form h2{
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .contact-form form{
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-form input, .contact-form textarea{
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            resize: none;
-        }
-        .contact-form button{
-            background: #007BFF;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: backgroung 0.3s;
-        }
-        .contact-form button:hover{
-            background: #0056b3;
-        }
-        @media(max-width: 768px){
-            .contact-container{
-                flex-direction: column;
-            }
-            .contact-info{
-                text-align: center;
-            }
-        }
-    </style>
+    }
+  </style>
 </head>
 <body>
-    <div class="Contact-container">
-        <div class="contact-info">
-            <h2>Contact-info</h2>
-            <p><strong>Email:djonalouison@gmail.com</strong></p>
-            <p><strong>Phone:+243 816018216</strong></p>
-            <p><strong>Location:Kampala(Uganda)</strong></p>
-        </div>
-        <div class="contact-form">
-            <h2>Send Me a Message</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required>
-                </textarea>
-                <button type="submit">Send Message</button>    
-            </form>
-        </div>
-    </div>
+  <header>
+    <h1>COMMENT NOUS JOINDRE</h1>
+  </header>
+
+  <main class="contact-container">
+    <section class="contact-intro">
+      <h2>Restez connecter</h2>
+      <p>Votre commentaire est le bienvenu. Envoyez-nous un message et nous vous recontacterons d'ici peu.</p>
+    </section>
+
+    <section class="contact-form">
+      <form id="form">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Lubumbashi Fashion Week. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Thank you for your message! We'll get back to you soon.");
+    this.reset();
+    });
+  </script>
 </body>
 </html>
