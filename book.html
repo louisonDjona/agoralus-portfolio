@@ -10,149 +10,149 @@
             padding: 0;
             box-sizing: border-box;
         }
-    body{
-        font-family: 'Georgia', serif;
-        background: #fff;
-        color: #111;
-        padding: 20px;
-    }
-    .page-header{
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    .page-header h1{
-        font-size: 2.5rem;
-        letter-spacing: 6px;
-        border-bottom: 1px solid #000;
-        display: inline-block;
-        padding-bottom: 10px;
-    }
-
-    .book-grid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 40px;
-        justify-content: center;
-    }
-
-    .model-card{
-        max-width: 400px;
-        width: 100%;
-        text-align: center;
-    }
-    .brand{
-        font-size: 2rem;
-        letter-spacing: 1rem;
-        margin-bottom: 25px;
-    }
-    .photo-wrapper img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border: 1px solid #ccc;
-        margin-bottom: 25px;
-    }
-    .model-name{
-        font-size: 1rem;
-        letter-spacing: 6px;
-        margin-bottom: 25px;
-    }
-    .details-table{
-        overflow-x: auto;
-        white-space: nowrap;
-        margin-top: 20px;
-        border-top: 1px solid #aaa;
-        border-bottom: 1px solid #aaa;
-        padding: 10px 0;
-    }
-    .details-row{
-        display: flex;
-        justify-content: space-between;
-        min-width: 600px;
-    }
-    .details-row span{
-        flex: 1;
-        text-align: center;
-        padding: 5px;
-        font-size: 1rem;
-        min-width: 80px;
-    }
-    .labels span{
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 0.85rem;
-    }
-    @media(max-width: 768px){
-        .details-row span{
-            font-size: 0.8rem;
-            min-width: 70px;
+        body{
+           font-family: 'Georgia', serif;
+           background: #fff;
+           color: #111;
+           padding: 20px;
         }
-        .labels span{
-            font-size: 0.75rem;
+        .page-header{
+           text-align: center;
+           margin-bottom: 40px;
         }
-    }
-    @media(max-width: 480px){
+        .page-header h1{
+           font-size: 2.5rem;
+           letter-spacing: 6px;
+           border-bottom: 1px solid #000;
+           display: inline-block;
+           padding-bottom: 10px;
+        }
+
+        .book-grid{
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+           gap: 40px;
+           justify-content: center;
+        }
+
+        .model-card{
+           max-width: 400px;
+           width: 100%;
+           text-align: center;
+        }
         .brand{
-            font-size: 1.6rem;
-            letter-spacing: 0.6rem;
+           font-size: 2rem;
+           letter-spacing: 1rem;
+           margin-bottom: 25px;
+        }
+        .photo-wrapper img{
+           width: 100%;
+           height: auto;
+           object-fit: cover;
+           border: 1px solid #ccc;
+           margin-bottom: 25px;
         }
         .model-name{
-            font-size: 0.9rem;
-            letter-spacing: 4px;
+           font-size: 1rem;
+           letter-spacing: 6px;
+           margin-bottom: 25px;
+        }
+        .details-table{
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-top: 20px;
+            border-top: 1px solid #aaa;
+            border-bottom: 1px solid #aaa;
+            padding: 10px 0;
+        }
+        .details-row{
+           display: flex;
+           justify-content: space-between;
+           min-width: 600px;
         }
         .details-row span{
-            font-weight: 0.7rem;
-            min-width: 60px;
+           flex: 1;
+           text-align: center;
+           padding: 5px;
+           font-size: 1rem;
+           min-width: 80px;
         }
         .labels span{
-            font-size: 0.7rem;
+           font-weight: bold;
+           text-transform: uppercase;
+           font-size: 0.85rem;
         }
-    }
-    .site-footer{
-        margin-top: 60px;
-        padding: 20px;
-        background-color: #111;
-        color: #fff;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 0.9rem;
-        gap: 20px;
-    }
-    .footer-left,
-    .footer-center,
-    .footer-right{
-        flex: 1 1 200px;
-        text-align: center;
-    }
-    .scroll-text{
-        white-space: nowrap;
-        overflow: hidden;
-        animation: scrollText 10s linear infinite;
-    }
-    @keyframes scrollText{
-        0% {transform: translateX(100%);}
-        100% {transform: 
-        translateX(-100%);
+        @media(max-width: 768px){
+           .details-row span{
+               font-size: 0.8rem;
+               min-width: 70px;
+            }
+            .labels span{
+               font-size: 0.75rem;
+            }
         }
-    }
-    .footer-right a{
-        color: #fff;
-        text-decoration: none;
-        border-bottom: 1px solid #fff;
-        transition: all 0.3s ease;
-    }
-    .footer-right a:hover{
-        color: #ccc;
-        border-color: #ccc;
-    }
-    @media(max-width: 600px){
+        @media(max-width: 480px){
+           .brand{
+               font-size: 1.6rem;
+               letter-spacing: 0.6rem;
+            }
+            .model-name{
+               font-size: 0.9rem;
+               letter-spacing: 4px;
+            }
+            .details-row span{
+                font-weight: 0.7rem;
+                min-width: 60px;
+            }
+            .labels span{
+               font-size: 0.7rem;
+            }
+        }
         .site-footer{
-            flex-direction: column;
+            width: 100%;
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            gap: 20px;
+        }
+        .footer-left,
+        .footer-center,
+        .footer-right{
+            flex: 1 1 200px;
             text-align: center;
         }
-    }
+        .scroll-text{
+           white-space: nowrap;
+           overflow: hidden;
+           animation: scrollText 10s linear infinite;
+        }
+        @keyframes scrollText{
+           0% {transform: translateX(100%);}
+           100% {transform: translateX(-100%);
+           }
+        }
+        .footer-right a{
+           color: #fff;
+           text-decoration: none;
+           border-bottom: 1px solid #fff;
+           transition: all 0.3s ease;
+        }
+        .footer-right a:hover{
+           color: #ccc;
+           border-color: #ccc;
+        }
+        @media(max-width: 600px){
+           .site-footer{
+              flex-direction: column;
+              text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -615,8 +615,8 @@
                 <img src="./Victor Lukusa/IMG_0978.PNG" alt="Victor Lukusa">
             </div>
             <h3 class="model-name">VICTOR &nbsp; LUKUSA</h3>
-            <div class="details-row details-table">
-                <div class="labels">
+            <div class="details-table">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -625,7 +625,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>179</span>
                     <span>88</span>
                     <span>76</span>
@@ -647,9 +647,6 @@
             <div class="scroll-text">
                 AGORRA - MANNEQUIN BOOK - AGORRA - MANNEQUIN BOOK
             </div>
-        </div>
-        <div class="footer-right">
-            <a href="">Newletter</a>
         </div>
     </footer>
     <script>
