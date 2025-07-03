@@ -58,27 +58,38 @@
         margin-bottom: 25px;
     }
     .details-table{
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        font-size: 1rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 20px;
+        border-top: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+        padding: 10px 0;
     }
-    .details-table .labels,
-    .details-table .values{
+    .details-row{
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        text-align: center;
-        gap: 5px;
+        min-width: 600px;
     }
-    .details-table span{
+    .details-row span{
         flex: 1;
-        min-width: 70px;
+        text-align: center;
+        padding: 5px;
+        font-size: 1rem;
+        min-width: 80px;
     }
-    .details-table .labels span{
+    .labels span{
         font-weight: bold;
-        font-size: 0.85rem;
         text-transform: uppercase;
+        font-size: 0.85rem;
+    }
+    @media(max-width: 768px){
+        .details-row span{
+            font-size: 0.8rem;
+            min-width: 70px;
+        }
+        .labels span{
+            font-size: 0.75rem;
+        }
     }
     @media(max-width: 480px){
         .brand{
@@ -89,9 +100,12 @@
             font-size: 0.9rem;
             letter-spacing: 4px;
         }
-        .details-table span{
-            font-weight: 0.9rem;
-            min-width: 50px;
+        .details-row span{
+            font-weight: 0.7rem;
+            min-width: 60px;
+        }
+        .labels span{
+            font-size: 0.7rem;
         }
     }
     .site-footer{
@@ -115,7 +129,7 @@
     .scroll-text{
         white-space: nowrap;
         overflow: hidden;
-        animation: 10s;
+        animation: scrollText 10s linear infinite;
     }
     @keyframes scrollText{
         0% {transform: translateX(100%);}
@@ -154,7 +168,7 @@
             </div>
             <h3 class="model-name">AIMERANCE &nbsp; BIN</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -163,7 +177,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>171</span>
                     <span>83</span>
                     <span>68</span>
@@ -182,7 +196,7 @@
             </div>
             <h3 class="model-name">ABIGAEL &nbsp; CHIAM</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -191,7 +205,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>173</span>
                     <span>82</span>
                     <span>69</span>
@@ -210,7 +224,7 @@
             </div>
             <h3 class="model-name">AUDREY &nbsp; MWANALUMA</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -219,7 +233,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>185</span>
                     <span>102</span>
                     <span>84</span>
@@ -238,7 +252,7 @@
             </div>
             <h3 class="model-name">KETHIA &nbsp; TSHIBUABUA</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -247,7 +261,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>171</span>
                     <span>80</span>
                     <span>63</span>
@@ -266,7 +280,7 @@
             </div>
             <h3 class="model-name">MIGRAEL &nbsp; LUATIANAKIO</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -275,7 +289,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>170</span>
                     <span>82</span>
                     <span>68</span>
@@ -294,7 +308,7 @@
             </div>
             <h3 class="model-name">ROSE &nbsp; KADINGA</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -303,7 +317,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>167</span>
                     <span>82</span>
                     <span>66</span>
@@ -322,7 +336,7 @@
             </div>
             <h3 class="model-name">SANDY &nbsp; MEYERS</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -331,7 +345,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>173</span>
                     <span>84</span>
                     <span>64</span>
@@ -350,7 +364,7 @@
             </div>
             <h3 class="model-name">TINA &nbsp; KISHIBA</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -359,7 +373,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>171</span>
                     <span>80</span>
                     <span>63</span>
@@ -378,7 +392,7 @@
             </div>
             <h3 class="model-name">TYTY &nbsp; FRANCINE</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -387,7 +401,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>171</span>
                     <span>81</span>
                     <span>64</span>
@@ -406,7 +420,7 @@
             </div>
             <h3 class="model-name">BLESS &nbsp; KONGOLO</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -415,7 +429,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>189</span>
                     <span>95</span>
                     <span>81</span>
@@ -434,7 +448,7 @@
             </div>
             <h3 class="model-name">CHRISTIAN &nbsp; SALOMON &nbsp; KAPAKO</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -443,7 +457,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>167</span>
                     <span>88</span>
                     <span>82</span>
@@ -462,7 +476,7 @@
             </div>
             <h3 class="model-name">DAN &nbsp; PIEMA</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -471,7 +485,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>182</span>
                     <span>85</span>
                     <span>73</span>
@@ -490,7 +504,7 @@
             </div>
             <h3 class="model-name">JUNIOR &nbsp; DOKI</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -499,7 +513,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>174</span>
                     <span>94</span>
                     <span>81</span>
@@ -518,7 +532,7 @@
             </div>
             <h3 class="model-name">LIONEL &nbsp; BWANA</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -527,7 +541,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>186</span>
                     <span>88</span>
                     <span>79</span>
@@ -546,7 +560,7 @@
             </div>
             <h3 class="model-name">PAUL &nbsp; MPUTU</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -555,7 +569,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>181</span>
                     <span>91</span>
                     <span>77</span>
@@ -574,7 +588,7 @@
             </div>
             <h3 class="model-name">PHOGENE &nbsp; SONYI</h3>
             <div class="details-table">
-                <div class="labels">
+                <div class="details-row labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
                     <span>Taille</span>
@@ -583,7 +597,7 @@
                     <span>Yeux</span>
                     <span>Pointure</span>
                 </div>
-                <div class="values">
+                <div class="details-row values">
                     <span>180</span>
                     <span>88</span>
                     <span>72</span>
@@ -601,7 +615,7 @@
                 <img src="./Victor Lukusa/IMG_0978.PNG" alt="Victor Lukusa">
             </div>
             <h3 class="model-name">VICTOR &nbsp; LUKUSA</h3>
-            <div class="details-table">
+            <div class="details-row details-table">
                 <div class="labels">
                     <span>Taille</span>
                     <span>Poitrine</span>
@@ -638,5 +652,8 @@
             <a href="">Newletter</a>
         </div>
     </footer>
+    <script>
+        document.getElementById("year").textContent=new Date().getFullYear();
+    </script>
 </body>
 </html>
