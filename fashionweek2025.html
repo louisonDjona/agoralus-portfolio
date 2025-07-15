@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lushi Fashion Week</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #fff;
+            color: #111;
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+        }
+        .agorra-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 2px solid black;
+            padding-bottom: 20px;
+        }
+        .agorra-header h1{
+            font-family: 'Playfair Display' serif;
+            font-size: 3em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .agorra-header img{
+            width: 280px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .agorra-about .titles{
+            margin: 40px 0 20px 0;
+        }
+        .agorra-about h2{
+            font-size: 2.5rem;
+            font-family: 'playfair Display', serif;
+            margin-bottom: 10px;
+        }
+        .agorra-about h3{
+            font-size: 1.8em;
+            font-weight: 400;
+            color: #555;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+        .agorra-content{
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .about-img{
+            flex: 1 1 300px;
+            max-width: 100px;
+            border-radius: 10px;
+        }
+        .about-text{
+            flex: 2 1 300px;
+        }
+        .about-text p{
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .about-text ul{
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+        @media(max-width: 768px){
+            .agorra-header{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .agorra-header img{
+                width: 100%;
+                margin-top: 20px;
+            }
+            .about-content{
+                flex-direction: column;
+            }
+            .about-text{
+                width: 100%;
+            }
+        }
+        .agorra-gallery{
+            margin-top: 60px;
+        }
+        .agorra-gallery h2{
+            font-size: 2.2rem;
+            font-family: 'Playfair Display' serif;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .gallery-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .gallery-grid img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-grid img:hover{
+            transform: scale(1.03);
+        }
+        @media(max-width: 992px){
+            .gallery-grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media(max-width: 600px){
+            .gallery-grid{
+                grid-template-columns: 1fr;
+            }
+        }
+        .agorra-footer{
+            background-color: #111;
+            color: #eee;
+            text-align: center;
+            padding: 30px 15px;
+            font-family: 'Playfair Display', serif;
+        }
+        .agorra-footer .footer-title{
+            font-size: 1.6em;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .agorra-footer .footer-tagline{
+            font-size: 1em;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+        .agorra-footer .footer-copy{
+            font-size: 0.9em;
+            color: #888;
+        }
+        @media(max-width: 600px){
+            .agorra-footer{
+                padding: 25px 10px;
+            }
+            .agorra-footer .footer-title{
+                font-size: 1.4em;
+            }
+            .agorra-footer .footer-tagline{
+                font-size: 0.95em;
+            }
+            .agorra-footer .footer-copy{
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="agorra-header">
+        <h1>Lushi Fashion Week</h1>
+        <img src="./FA 2025/IMG_3001.jpg" alt="Fshion Banner">
+    </header>
+    <section class="agorra-about">
+        <div class="titles">
+            <h2>A propos</h2>
+            <h3>LUBUMBASHI FASHION WEEK</h3>
+        </div>
+        <div class="about-content">
+            <img src="./FA 2025/IMG_2180.jpg" alt="About Fashion" class="about-img">
+            <div class="about-text">
+                <p>La Fashion Week de Lubumbashi est un événément incontournable de la
+                   scène culturelle et créative congolaise. Depuis sa création en 2022, elle se 
+                   positionne comme une vitrine dynamique de la mode, de l'art et du patrimoine
+                   local, tou en favorisant des connexions nationales et internationales.
+                </p>
+                <p>Organisée chaque année, la fashion week réunit sylistes, mannequins, 
+                   créateurs, photographes, médias et amoureux de la mode dans un esprit de 
+                   célébration, de partage et d'innovation. Elle occupe une place stratégique dans le 
+                   rayonnement de Lubumbashi sur la carte des capitales africaines de la mode. Elle a comme 
+                   objecif de:
+                </p>
+                <ul>
+                    <li>Promouvoir la créativite et l'innovation dans l'industrie de la mode a Lubumbashi.</li>
+                    <li>Mettre en lumière les talents locaux.</li>
+                    <li>Encourager les échanges culturels et professionels dans le domaine de la mode.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="vogue gallery">
+        <h2>Thème de l'evenement</h2>
+        <div class="gallery-grid">
+            <img src="./FA 2025/IMG_2176.jpg" alt="Fashion 1">
+            <img src="./FA 2025/IMG_2177.jpg" alt="Fashion 2">
+            <img src="./FA 2025/IMG_2180.jpg" alt="Fashion 3">
+            <img src="./FA 2025/IMG_3002.jpg" alt="Fashion 4">
+        </div>
+    </section>
+    <footer class="agorra-footer">
+        <p class="footer-title">Lushi Fashion Week</p>
+        <p class="footer-tagline">L'élégance au coeur de Lubumbashi</p>
+        <p class="footer-copy">&copy;<span id="year"></span>Tous droits réservés</p>
+        <script>
+            document.getElementById("year").textContent=new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>
