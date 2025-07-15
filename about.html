@@ -101,6 +101,51 @@
             flex-direction: column;
         }
     }
+    .team-section{
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    .section-title{
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: #0a0a23;
+      letter-spacing: 2px;
+    }
+    .team-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    .team-member{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .team-member:hover{
+      transform: scale(1.03);
+    }
+    .team-member img{
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      max-width: 250px;
+    }
+    .team-member h3{
+      margin-top: 1rem;
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+    }
+    .team-member p{
+      font-size: 0.95rem;
+      color: #555;
+    }
   </style>
 </head>
 <body>
@@ -143,6 +188,36 @@
     <div class="about-image">
       <img src="./IMG_4049.JPG" alt="AGORRA Image" />
     </div>
+  </section>
+  <section class="team-section">
+   <h2 class="section-title">TEAM</h2>
+   <div class="team-grid">
+      <div class="team-member">
+         <img src="./Team/IMG_0159.JPG" alt="Lydia Katanga">
+         <h3>Lydia KATANGA</h3>
+         <p>Presidente directrice generale</p>
+      </div>
+      <div class="team-member">
+         <img src="./Team/IMG_4774.JPG" alt="Bedusei Mambu">
+         <h3>Bedusei MAMBU</h3>
+         <p>Direteur artistique</p>
+      </div>
+      <div class="team-member">
+         <img src="./Team/IMG_0508.JPG" alt="Junior Doki">
+         <h3>Junior DOKI</h3>
+         <p>Directeur Marketing</p>
+      </div>
+      <div class="team-member">
+         <img src="./Team/IMG_0119.JPG" alt="Rose KADINGA">
+         <h3>Rose KANDINGA</h3>
+         <p>Secretaire administrative</p>
+      </div>
+      <div class="team-member">
+         <img src="./Team/IMG_4883.JPG" alt="Salem Lumbu">
+         <h3>Salem Lumbu</h3>
+         <p>Charge des finances</p>
+      </div>
+   </div>
   </section>
 
   <footer class="footer">
