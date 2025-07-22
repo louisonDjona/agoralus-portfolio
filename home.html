@@ -10,35 +10,15 @@
       padding: 0;
       box-sizing: border-box;
     }
+    html{
+      scroll-behavior: smooth;
+    }
 
     body{
       font-family: 'Times New Roman', Times, serif;
       background: var(--bg-color);
       color: var(--text-color);
     }
-
-    :root{
-      --bg-color: #fff;
-      --text-color: #111;
-      --link-color: #333;
-      --footer-bg: #111;
-    }
-
-    body.light-mode{
-      --bg-color: #fff;
-      --text-color: #111;
-      --link-color: #333;
-      --footer-bg: #111;
-    }
-
-    body.darkmode{
-      --bg-color: #000;
-      --text-color: #fff;
-      --link-color: #aaa;
-      --footer-bg: #000;
-    }
-
-
     a{
       text-decoration: none;
       color: var(--link-color)
@@ -188,168 +168,69 @@
         flex-direction: column;
       }
     }
-
     .footer{
-      position: relative;
-      color: white;
+      background-color: #111;
+      color: #fff;
+      padding: 20px 0;
+      font-family: 'Helvetica Neue' sans-serif;
       text-align: center;
-      background: var(--footer-bg);
-      overflow: hidden;
     }
-
-    .footer-overlay{
-      background: rgba(0,0,0,0.85);
-      padding: 3rem 1rem;
-      background-image: url('./IMG_5778.JPG');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .footer-container{
+    .footer-content{
       max-width: 1200px;
       margin: auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
     }
-
-    .footer-top h2{
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
+    .footer-message{
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    .contact-link{
+      color: #fff;
+      margin: 10px;
+      text-decoration: underline;
       font-weight: 500;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
     }
-
-    .theme-btn{
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--link-color);
-      color: var(--bg-color);
-      border: none;
-      border-radius: 20px;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      z-index: 1000;
+    .contact-link:hover{
+      opacity: 1;
     }
-
-    .newletter{
+    .social-buttons{
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 15px;
     }
-
-    .newletter input{
-      padding: 0.6rem 1rem;
-      border: none;
-      border-radius: 30px;
-      width: 250px;
-      max-width: 100%;
+    .circle-button{
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #fff;
+      transition: transform 0.3 ease;
     }
-
-    .newletter button{
-      padding: 0.6rem 1.5rem;
-      border: none;
-      border-radius: 30px;
-      background: white;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
+    .circle-button img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-
-    .footer-bottom p{
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-    } 
-
-    .footer-links{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1rem;
-    }
-
-    .footer-links a{
-      color: #ccc;
-      font-size: 0.9rem;
-      transition: color 0.3s;
-    }
-
-    .footer-links a:hover{
-      color: #fff;
-    }
-
-    .lang-switch{
-      padding: 0.3rem;
-      border-radius: 5px;
-      border: none;
-      font-size: 0.9rem;
-    }
-
-    .social-icons{
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .social-icons img{
-      width: 24px;
-      height: 24px;
-      filter: brightness(0) invert(1);
-      transition: transform 0.3s ease;
-    }
-
-    .one{
-      background-image: url(./instagram.JPG);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .two{
-      background-image: url(./tiktok.jpg);
-      background: #000;
-      color: #fff;
-    }
-
-    .social-icons img:hover{
+    .circle-button:hover{
       transform: scale(1.1);
     }
-
-    @media(max-width: 600px){
-      .newletter{
-        flex-direction: column;
-        align-items: center;
+    @media(min-width: 600px){
+      .footer-content{
+        flex-direction: row;
+        justify-content: space-between;
       }
-      .footer-links{
-        flex-direction: column;
-        gap: 0.8rem;
+      .footer-message{
+        text-align: left;
       }
-    }
-
-    .footer-marquee{
-      overflow: hidden;
-      white-space: nowrap;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin: 2rem;
-      padding-top: 1rem;
-    }
-
-    .footer-marquee p{
-      display: inline-block;
-      animation: scroll-left 20s linear infinite;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    @keyframes scroll-left{
-      0%{
-        transform: translateX(100%);
-      }
-      100%{
-        transform: translateX(-100%);
+      .social-buttons{
+        justify-content: flex-end;
       }
     }
   </style>
@@ -378,7 +259,7 @@
 
   <section class="article-une">
     <div class="article-container">
-      <img src="./FA 2025/IMG_3087.jpg" alt="article a la une1">
+      <img src="./FA 2025/IMG_3087.jpg" loading="lazy" alt="article a la une1">
       <div class="text">
         <h2>LUBUMBASHI FASHION WEEK 2025</h2>
         <a href="./fashionweek2025.html" class="btn">Lire l'article</a>
@@ -388,7 +269,7 @@
 
   <section class="article-une">
     <div class="article-container">
-      <img src="./pics/IMG_1891.JPG" alt="article a la une2">
+      <img src="./pics/IMG_1891.JPG" loading="lazy" alt="article a la une2">
       <div class="text">
         <h2>LUBUMBASHI FASHION WEEK 2024</h2>
         <a href="./fashionweek.html" class="btn">Lire l'article</a>
@@ -399,58 +280,37 @@
   <section class="agorra-content">
     <div class="grid">
       <div class="card">
-        <img src="./IMG_0913.JPG"/>
+        <img src="./IMG_0913.JPG" loading="lazy"/>
         <h3>Tendance Mode</h3>
       </div>
       <div class="card">
-        <img src="./IMG_6376.JPG"/>
+        <img src="./IMG_6376.JPG" loading="lazy"/>
         <h3>Beauté du moment</h3>
       </div>
       <div class="card">
-        <img src="./IMG_0841.JPG"/>
+        <img src="./IMG_0841.JPG" loading="lazy"/>
         <h3>Portrait des Stars</h3>
       </div>
       <div class="card">
-        <img src="./IMG_1390.JPG"/>
+        <img src="./IMG_1390.JPG" loading="lazy"/>
         <h3>Un art de vivre</h3>
       </div>
     </div>
   </section>
-
   <footer class="footer">
-    <div class="footer-overlay">
-      <div class="footer-container">
-        <div class="footer-top">
-          <h2>Restez connectés</h2>
-          <form class="newsletter">
-            <input type="email" placeholder="" required>
-            <button type="submit">S'abonner</button>
-            </form>
-          </form>
-        </div>
-        <div class="footer-bottom">
-          <p id="copyright">&copy;<span id="year"></span>Agorra 2025 - Tous droits réservés.</p>
-          <ul class="footer-links">
-            <li><a href="">Mentions légales</a></li>
-            <li><a href="">Confidentialités</a></li>
-            <li><a href="./contact.html">contact</a></li>
-            <li><select class="lang-swicth">
-              <option value="fr">Francais</option>
-              <option value="en">English</option>
-            </select></li>
-          </ul>
-          <div class="social-icons">
-            <a class="one" href="https://www.instagram.com/agorrardc?igsh=cjUwdHZaXJmbTI0&utm_source=qr">instagram</a>
-            <a class="two" href="https://www.tiktok.com/@agorrardc">Tiktok</a>
-          </div>
-        </div>
-        <div class="footer-marquee">
-          <p>AGORRA . MODE . BEAUTE . CULTURE . DEFILES . LIFESTYLE . AGORRA STYLE VIBES</p>
-        </div>
+    <div class="footer-content">
+      <p class="footer-message">&copy; AGORRA 2025. TOUS DROITS RESERVES.</p>
+      <div class="social-buttons">
+        <a href="./contact.html" class="contact-link">Contactez-nous</a>
+        <a href="https://www.instagram.com/agorrardc" target="_blank" class="circle-button">
+          <img src="./Icons/10 Surprising Ways to Use Instagram in the Classroom.jpg" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/@agorrardc" target="_blank" class="circle-button">
+          <img src="./Icons/Tik Tok Icon Circle PNG Transparent With Clear Background ID 473286 _ TopPNG.jpg" alt="Tiktok">
+        </a>
       </div>
     </div>
   </footer>
-
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const text = document.querySelector(".overlay h2");
